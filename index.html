@@ -7,202 +7,244 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">KIM BO YOUNG</div>
-            <ul class="nav-menu">
-                <li><a href="#home">홈</a></li>
-                <li><a href="#about">소개</a></li>
-                <li><a href="#skills">기술</a></li>
-                <li><a href="#projects">프로젝트</a></li>
-                <li><a href="#contact">연락처</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>안녕하세요, <span>김보영</span>입니다</h1>
-                <p>웹 개발자 | UI/UX 디자이너</p>
-                <p>디자인 감각, 퍼블리싱 디테일, 개발 역량을 한데 묶어 ‘보이는 것’과 ‘동작하는 것’을 함께 완성합니다.</p>
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn">프로젝트 보기</a>
-                    <a href="#contact" class="btn btn-outline">연락하기</a>
-                </div>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="header-container">
+            <div class="header-content">
+                <h1 class="name">김보영</h1>
+                <p class="title">웹 개발자 | UI/UX 디자이너</p>
+                <p class="description">디자인 감각, 퍼블리싱 디테일, 개발 역량을 한데 묶어 '보이는 것'과 '동작하는 것'을 함께 완성합니다.</p>
             </div>
+            <nav class="nav-menu">
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
         </div>
-    </section>
+    </header>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2>소개</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>저는 5년 경력의 웹 개발자입니다. 사용자 중심의 디자인과 효율적인 코드를 작성하는 것을 좋아합니다.</p>
-                    <p>최신 기술 트렌드를 계속 학습하며, 복잡한 문제를 해결하는 것을 즐깁니다.</p>
-                    <div class="about-info">
-                        <p><strong>위치:</strong> 서울, 대한민국</p>
-                        <p><strong>학력:</strong> 컴퓨터 공학 학사</p>
-                        <p><strong>경력:</strong> 5년+</p>
-                    </div>
-                </div>
-                <div class="about-stats">
-                    <div class="stat">
-                        <h3>50+</h3>
-                        <p>완료된 프로젝트</p>
-                    </div>
-                    <div class="stat">
-                        <h3>30+</h3>
-                        <p>만족한 고객</p>
-                    </div>
-                    <div class="stat">
-                        <h3>5+</h3>
-                        <p>년 경력</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2>기술 스택</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>프론트엔드</h3>
-                    <div class="skill-list">
-                        <span>HTML5</span>
-                        <span>CSS3</span>
-                        <span>JavaScript</span>
-                        <span>React</span>
-                        <span>Vue.js</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>백엔드</h3>
-                    <div class="skill-list">
-                        <span>Node.js</span>
-                        <span>Python</span>
-                        <span>MySQL</span>
-                        <span>MongoDB</span>
-                        <span>Docker</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>디자인</h3>
-                    <div class="skill-list">
-                        <span>Figma</span>
-                        <span>Photoshop</span>
-                        <span>Illustrator</span>
-                        <span>Sketch</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2>프로젝트</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="placeholder">🛍️</div>
-                    </div>
-                    <div class="project-info">
-                        <h3>이커머스 플랫폼</h3>
-                        <p>React와 Node.js를 사용한 현대적인 쇼핑몰 플랫폼</p>
-                        <div class="tech-tags">
-                            <span>React</span>
-                            <span>Node.js</span>
-                            <span>MongoDB</span>
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="content-container">
+            <div class="content-grid">
+                <!-- Left Column - Career Timeline -->
+                <section id="experience" class="career-timeline">
+                    <h2 class="section-title">Career Timeline</h2>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h3>시니어 웹 개발자</h3>
+                                <p class="timeline-date">2020 - 현재</p>
+                                <p>사용자 중심의 디자인과 효율적인 코드를 작성하며 5년 경력의 웹 개발자로서 복잡한 문제 해결에 집중</p>
+                            </div>
                         </div>
-                        <div class="project-links">
-                            <a href="#">라이브 데모</a>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h3>프론트엔드 개발자</h3>
+                                <p class="timeline-date">2018 - 2020</p>
+                                <p>최신 기술 트렌드를 계속 학습하며 프론트엔드 개발에 전문성을 쌓음</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h3>주니어 개발자</h3>
+                                <p class="timeline-date">2017 - 2018</p>
+                                <p>컴퓨터 공학 학사 졸업 후 웹 개발자로 커리어 시작</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <h3>50+</h3>
+                            <p>완료된 프로젝트</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>30+</h3>
+                            <p>만족한 고객</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>5+</h3>
+                            <p>년 경력</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Right Column - Skills -->
+                <section id="skills" class="skills-section">
+                    <h2 class="section-title">Skills</h2>
+                    <div class="skills-container">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-icon">💻</span>
+                                <span class="skill-name">HTML5</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-icon">🎨</span>
+                                <span class="skill-name">CSS3</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-icon">⚡</span>
+                                <span class="skill-name">JavaScript</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-icon">⚛️</span>
+                                <span class="skill-name">React</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-icon">🖥️</span>
+                                <span class="skill-name">Node.js</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-icon">🐍</span>
+                                <span class="skill-name">Python</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-icon">🗄️</span>
+                                <span class="skill-name">MySQL</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 65%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-icon">📊</span>
+                                <span class="skill-name">MongoDB</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 60%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Projects Section -->
+            <section id="projects" class="projects-section">
+                <h2 class="section-title">Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="placeholder">🛍️</div>
+                        </div>
+                        <div class="project-info">
+                            <h3>이커머스 플랫폼</h3>
+                            <p>React와 Node.js를 사용한 현대적인 쇼핑몰 플랫폼</p>
+                            <div class="tech-tags">
+                                <span>React</span>
+                                <span>Node.js</span>
+                                <span>MongoDB</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#">라이브 데모</a>
+                                <a href="#">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="placeholder">📱</div>
+                        </div>
+                        <div class="project-info">
+                            <h3>태스크 관리 앱</h3>
+                            <p>Vue.js와 Firebase를 사용한 실시간 협업 애플리케이션</p>
+                            <div class="tech-tags">
+                                <span>Vue.js</span>
+                                <span>Firebase</span>
+                                <span>Tailwind</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#">라이브 데모</a>
+                                <a href="#">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="placeholder">📊</div>
+                        </div>
+                        <div class="project-info">
+                            <h3>데이터 분석 대시보드</h3>
+                            <p>D3.js와 Python을 사용한 인터랙티브 데이터 시각화</p>
+                            <div class="tech-tags">
+                                <span>D3.js</span>
+                                <span>Python</span>
+                                <span>PostgreSQL</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#">라이브 데모</a>
+                                <a href="#">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="contact-section">
+                <h2 class="section-title">Contact</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>함께 일하고 싶으신가요?</h3>
+                        <p>새로운 프로젝트나 협업 기회에 대해 이야기하고 싶으시면 언제든지 연락주세요.</p>
+                        <div class="contact-details">
+                            <p>📧 your.email@example.com</p>
+                            <p>📞 +82 10-1234-5678</p>
+                            <p>📍 서울, 대한민국</p>
+                        </div>
+                        <div class="social-links">
                             <a href="#">GitHub</a>
+                            <a href="#">LinkedIn</a>
+                            <a href="#">Twitter</a>
                         </div>
                     </div>
+                    <form class="contact-form">
+                        <input type="email" placeholder="Email" required>
+                        <textarea placeholder="Message" rows="5" required></textarea>
+                        <button type="submit" class="submit-btn">Send</button>
+                    </form>
                 </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="placeholder">📱</div>
-                    </div>
-                    <div class="project-info">
-                        <h3>태스크 관리 앱</h3>
-                        <p>Vue.js와 Firebase를 사용한 실시간 협업 애플리케이션</p>
-                        <div class="tech-tags">
-                            <span>Vue.js</span>
-                            <span>Firebase</span>
-                            <span>Tailwind</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#">라이브 데모</a>
-                            <a href="#">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="placeholder">📊</div>
-                    </div>
-                    <div class="project-info">
-                        <h3>데이터 분석 대시보드</h3>
-                        <p>D3.js와 Python을 사용한 인터랙티브 데이터 시각화</p>
-                        <div class="tech-tags">
-                            <span>D3.js</span>
-                            <span>Python</span>
-                            <span>PostgreSQL</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#">라이브 데모</a>
-                            <a href="#">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            </section>
         </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>연락처</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>함께 일하고 싶으신가요?</h3>
-                    <p>새로운 프로젝트나 협업 기회에 대해 이야기하고 싶으시면 언제든지 연락주세요.</p>
-                    <div class="contact-details">
-                        <p>📧 your.email@example.com</p>
-                        <p>📞 +82 10-1234-5678</p>
-                        <p>📍 서울, 대한민국</p>
-                    </div>
-                    <div class="social-links">
-                        <a href="#">GitHub</a>
-                        <a href="#">LinkedIn</a>
-                        <a href="#">Twitter</a>
-                    </div>
-                </div>
-                <form class="contact-form">
-                    <input type="text" placeholder="이름" required>
-                    <input type="email" placeholder="이메일" required>
-                    <input type="text" placeholder="제목" required>
-                    <textarea placeholder="메시지" rows="5" required></textarea>
-                    <button type="submit" class="btn">메시지 보내기</button>
-                </form>
-            </div>
-        </div>
-    </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 홍길동. All rights reserved.</p>
+            <p>&copy; 2024 boyoung.kim. All rights reserved.</p>
         </div>
     </footer>
 
