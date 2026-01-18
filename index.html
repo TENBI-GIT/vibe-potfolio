@@ -332,14 +332,29 @@
             <!-- Projects Section -->
             <section id="portfolio" class="projects-section">
                 <h2 class="section-title">Portfolio</h2>
+                
+                <!-- Tab Navigation -->
+                <div class="portfolio-tabs">
+                    <button class="tab-btn active" data-tab="all">전체</button>
+                    <button class="tab-btn" data-tab="web">Web & UI/UX</button>
+                    <button class="tab-btn" data-tab="graphic">Graphic & Branding</button>
+                    <button class="tab-btn" data-tab="space">Space / Exhibition</button>
+                </div>
+                
+                <!-- Tab Content -->
                 <div class="projects-grid">
-                    <div class="project-card">
+                    <!-- Web & UI/UX Projects -->
+                    <div class="project-card featured" data-category="web">
                         <div class="project-image">
-                            <div class="placeholder">🛍️</div>
+                            <img src="https://via.placeholder.com/400x300/EA580C/FFFFFF?text=혼밥혼술" alt="혼밥혼술 프로젝트">
                         </div>
                         <div class="project-info">
-                            <h3>이커머스 플랫폼</h3>
-                            <p>React와 Node.js를 사용한 현대적인 쇼핑몰 플랫폼</p>
+                            <h3>혼밥혼술</h3>
+                            <div class="project-meta">
+                                <span class="role">UI/UX Design · Frontend</span>
+                                <span class="type">Web / Mobile</span>
+                            </div>
+                            <p>사용자 경험 중심 서비스 UI 설계 및 구현</p>
                             <div class="tech-tags">
                                 <span>React</span>
                                 <span>Node.js</span>
@@ -351,17 +366,22 @@
                             </div>
                         </div>
                     </div>
-                    <div class="project-card">
+                    
+                    <div class="project-card featured" data-category="web">
                         <div class="project-image">
-                            <div class="placeholder">📱</div>
+                            <img src="https://via.placeholder.com/400x300/FB923C/FFFFFF?text=국군간호사관학교" alt="국군간호사관학교 홈페이지">
                         </div>
                         <div class="project-info">
-                            <h3>태스크 관리 앱</h3>
-                            <p>Vue.js와 Firebase를 사용한 실시간 협업 애플리케이션</p>
+                            <h3>국군간호사관학교 홈페이지 리뉴얼</h3>
+                            <div class="project-meta">
+                                <span class="role">UI/UX Design · Frontend</span>
+                                <span class="type">PC Web</span>
+                            </div>
+                            <p>기존 사이트 개선 중심의 반응형 웹 설계</p>
                             <div class="tech-tags">
-                                <span>Vue.js</span>
-                                <span>Firebase</span>
-                                <span>Tailwind</span>
+                                <span>HTML/CSS</span>
+                                <span>JavaScript</span>
+                                <span>Responsive</span>
                             </div>
                             <div class="project-links">
                                 <a href="#">라이브 데모</a>
@@ -369,20 +389,211 @@
                             </div>
                         </div>
                     </div>
-                    <div class="project-card">
+                    
+                    <div class="project-card featured" data-category="web">
                         <div class="project-image">
-                            <div class="placeholder">📊</div>
+                            <img src="https://via.placeholder.com/400x300/1E293B/FFFFFF?text=그린피스" alt="그린피스 웹 리뉴얼">
                         </div>
                         <div class="project-info">
-                            <h3>데이터 분석 대시보드</h3>
-                            <p>D3.js와 Python을 사용한 인터랙티브 데이터 시각화</p>
+                            <h3>그린피스 웹 리뉴얼</h3>
+                            <div class="project-meta">
+                                <span class="role">UI/UX Design · Frontend</span>
+                                <span class="type">Responsive Web</span>
+                            </div>
+                            <p>인터랙티브 UI를 적용한 반응형 웹</p>
                             <div class="tech-tags">
-                                <span>D3.js</span>
-                                <span>Python</span>
-                                <span>PostgreSQL</span>
+                                <span>Vue.js</span>
+                                <span>Sass</span>
+                                <span>GSAP</span>
                             </div>
                             <div class="project-links">
                                 <a href="#">라이브 데모</a>
+                                <a href="#">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Graphic & Branding Projects -->
+                    <div class="project-card" data-category="graphic">
+                        <div class="project-image">
+                            <img src="https://via.placeholder.com/300x200/EA580C/FFFFFF?text=힙스터피자" alt="힙스터피자 브랜딩">
+                        </div>
+                        <div class="project-info">
+                            <h3>힙스터피자</h3>
+                            <div class="project-meta">
+                                <span class="role">Brand Designer</span>
+                                <span class="output">Logo · Sign · Package</span>
+                            </div>
+                            <p>브랜드 아이덴티티 구축 및 시스템 디자인</p>
+                            <div class="tech-tags">
+                                <span>Branding</span>
+                                <span>Logo Design</span>
+                                <span>Package</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#">상세보기</a>
+                                <a href="#">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card" data-category="graphic">
+                        <div class="project-image">
+                            <img src="https://via.placeholder.com/300x200/FB923C/FFFFFF?text=통일군간호포럼" alt="통일군간호포럼">
+                        </div>
+                        <div class="project-info">
+                            <h3>통일군간호포럼</h3>
+                            <div class="project-meta">
+                                <span class="role">Graphic Designer</span>
+                                <span class="output">Poster · Leaflet</span>
+                            </div>
+                            <p>포스터 및 인쇄물 디자인</p>
+                            <div class="tech-tags">
+                                <span>Print Design</span>
+                                <span>Poster</span>
+                                <span>Editorial</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#">상세보기</a>
+                                <a href="#">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card" data-category="graphic">
+                        <div class="project-image">
+                            <img src="https://via.placeholder.com/300x200/1E293B/FFFFFF?text=광주봄꽃박람회" alt="광주 봄꽃 박람회">
+                        </div>
+                        <div class="project-info">
+                            <h3>광주 봄꽃 박람회</h3>
+                            <div class="project-meta">
+                                <span class="role">Illustrator</span>
+                                <span class="output">Poster · Event</span>
+                            </div>
+                            <p>일러스트 기반 포스터 디자인</p>
+                            <div class="tech-tags">
+                                <span>Illustration</span>
+                                <span>Event Design</span>
+                                <span>Poster</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#">상세보기</a>
+                                <a href="#">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card" data-category="graphic">
+                        <div class="project-image">
+                            <img src="https://via.placeholder.com/300x200/EA580C/FFFFFF?text=아시아문화산업진흥원" alt="아시아문화산업진흥원">
+                        </div>
+                        <div class="project-info">
+                            <h3>아시아문화산업진흥원(AIC)</h3>
+                            <div class="project-meta">
+                                <span class="role">Brand Designer</span>
+                                <span class="output">CI / BI System</span>
+                            </div>
+                            <p>CI/BI 시스템 구축</p>
+                            <div class="tech-tags">
+                                <span>Brand Identity</span>
+                                <span>CI Design</span>
+                                <span>Guideline</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#">상세보기</a>
+                                <a href="#">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Space / Exhibition Projects -->
+                    <div class="project-card" data-category="space">
+                        <div class="project-image">
+                            <img src="https://via.placeholder.com/300x200/FB923C/FFFFFF?text=신탄진새여울휴게소" alt="신탄진 새여울 휴게소">
+                        </div>
+                        <div class="project-info">
+                            <h3>신탄진 새여울 휴게소</h3>
+                            <div class="project-meta">
+                                <span class="role">Space / Signage Designer</span>
+                                <span class="output">Sign System · Menu Board</span>
+                            </div>
+                            <p>내부 사인 시스템 및 공간 그래픽 디자인</p>
+                            <div class="tech-tags">
+                                <span>Signage</span>
+                                <span>Space Design</span>
+                                <span>Environmental</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#">상세보기</a>
+                                <a href="#">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card" data-category="space">
+                        <div class="project-image">
+                            <img src="https://via.placeholder.com/300x200/1E293B/FFFFFF?text=한국소비자원전시" alt="한국소비자원 전시">
+                        </div>
+                        <div class="project-info">
+                            <h3>한국소비자원 전시</h3>
+                            <div class="project-meta">
+                                <span class="role">Exhibition Designer</span>
+                                <span class="output">Exhibition · Space</span>
+                            </div>
+                            <p>전시 공간 디자인 및 기획</p>
+                            <div class="tech-tags">
+                                <span>Exhibition</span>
+                                <span>Space Planning</span>
+                                <span>Installation</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#">상세보기</a>
+                                <a href="#">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card" data-category="space">
+                        <div class="project-image">
+                            <img src="https://via.placeholder.com/300x200/EA580C/FFFFFF?text=국군간호사관학교사인" alt="국군간호사관학교 사인 시스템">
+                        </div>
+                        <div class="project-info">
+                            <h3>국군간호사관학교 사인 시스템</h3>
+                            <div class="project-meta">
+                                <span class="role">Signage Designer</span>
+                                <span class="output">Sign System · Wayfinding</span>
+                            </div>
+                            <p>캠퍼스 사인 시스템 통합 디자인</p>
+                            <div class="tech-tags">
+                                <span>Signage</span>
+                                <span>Wayfinding</span>
+                                <span>Environmental</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#">상세보기</a>
+                                <a href="#">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card" data-category="space">
+                        <div class="project-image">
+                            <img src="https://via.placeholder.com/300x200/FB923C/FFFFFF?text=4D쉘터" alt="4D 쉘터 광고 매체">
+                        </div>
+                        <div class="project-info">
+                            <h3>4D 쉘터 / 광고 매체</h3>
+                            <div class="project-meta">
+                                <span class="role">Media Designer</span>
+                                <span class="output">Proposal · PPT</span>
+                            </div>
+                            <p>제안서 및 PPT 디자인</p>
+                            <div class="tech-tags">
+                                <span>Presentation</span>
+                                <span>Proposal</span>
+                                <span>Media</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#">상세보기</a>
                                 <a href="#">GitHub</a>
                             </div>
                         </div>
@@ -421,7 +632,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 boyoung.kim. All rights reserved.</p>
+            <p>&copy; 2026 boyoung.kim. All rights reserved.</p>
         </div>
     </footer>
 
