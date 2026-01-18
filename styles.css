@@ -99,26 +99,70 @@ body {
     gap: 30px;
 }
 
-.nav-link {
+.nav-menu a {
     color: white;
     text-decoration: none;
     font-weight: 500;
     font-size: 1rem;
-    transition: all 0.3s ease;
     padding: 8px 16px;
-    border-radius: 20px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
 }
 
-.nav-link:hover {
-    background: rgba(255, 255, 255, 0.25);
-    transform: translateY(-2px);
+.nav-menu a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.6s ease;
 }
 
-.nav-link.is-active {
-    background: rgba(255, 255, 255, 0.3);
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+.nav-menu a:hover::before {
+    left: 100%;
+}
+
+.nav-menu a:hover {
+    background: linear-gradient(135deg, rgba(251, 146, 60, 0.3) 0%, rgba(234, 88, 12, 0.4) 100%);
+    transform: translateY(-2px) scale(1.05);
+    color: #FFFBEB;
+    text-shadow: 0 2px 8px rgba(234, 88, 12, 0.3);
+}
+
+.nav-menu a.is-active {
+    background: linear-gradient(135deg, rgba(251, 146, 60, 0.4) 0%, rgba(234, 88, 12, 0.5) 100%);
+    color: #FFFBEB;
+    transform: translateY(-1px) scale(1.02);
+    text-shadow: 0 2px 6px rgba(234, 88, 12, 0.4);
+    border: 1px solid rgba(251, 146, 60, 0.3);
+}
+
+.nav-menu a.is-active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 3px;
+    background: linear-gradient(90deg, #FFFBEB 0%, #FED7AA 100%);
+    border-radius: 2px;
+    animation: activeIndicator 0.3s ease;
+}
+
+@keyframes activeIndicator {
+    0% {
+        width: 0;
+        opacity: 0;
+    }
+    100% {
+        width: 30px;
+        opacity: 1;
+    }
 }
 
 /* Main Content */
@@ -680,6 +724,219 @@ body {
     margin-bottom: 80px;
 }
 
+.portfolio-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    padding: 12px 24px;
+    border: 2px solid var(--accent-300);
+    background: white;
+    color: var(--night-blue);
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.tab-btn:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(234, 88, 12, 0.15);
+}
+
+.tab-btn.active {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--coral) 100%);
+    color: white;
+    border-color: var(--primary);
+    box-shadow: 0 4px 15px rgba(234, 88, 12, 0.25);
+}
+
+.tab-content {
+    position: relative;
+}
+
+.tab-pane {
+    display: none;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.tab-pane.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.portfolio-category {
+    margin-bottom: 60px;
+}
+
+.category-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.category-title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--coral) 100%);
+}
+
+.category-description {
+    font-size: 1rem;
+    color: var(--night-blue);
+    opacity: 0.8;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.featured-projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.project-card.featured {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border: 1px solid #f0f0f0;
+}
+
+.project-card.featured:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(234, 88, 12, 0.15);
+}
+
+.project-card.featured .project-image {
+    height: 250px;
+    overflow: hidden;
+}
+
+.project-card.featured .project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.project-card.featured:hover .project-image img {
+    transform: scale(1.05);
+}
+
+.project-card.featured .project-info {
+    padding: 25px;
+}
+
+.project-card.featured h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--night-blue);
+    margin-bottom: 12px;
+}
+
+.project-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.project-meta .role,
+.project-meta .type,
+.project-meta .output {
+    display: inline-flex;
+    align-items: center;
+    height: 28px;
+    padding: 0 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.project-meta .role {
+    background: linear-gradient(135deg, #FFF7ED 0%, #FED7AA 100%);
+    color: var(--primary);
+    border: 1px solid var(--accent-300);
+}
+
+.project-meta .type {
+    background: linear-gradient(135deg, #FFF7ED 0%, #FED7AA 100%);
+    color: var(--coral);
+    border: 1px solid var(--accent-300);
+}
+
+.project-meta .output {
+    background: linear-gradient(135deg, #FFF7ED 0%, #FED7AA 100%);
+    color: var(--night-blue);
+    border: 1px solid var(--accent-300);
+}
+
+.project-card.featured p {
+    color: #6c757d;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.project-card.featured .tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.project-card.featured .tech-tags span {
+    background: linear-gradient(135deg, #FFF7ED 0%, #FED7AA 100%);
+    color: var(--primary);
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border: 1px solid var(--accent-300);
+}
+
+.project-card.featured .project-links {
+    display: flex;
+    gap: 15px;
+}
+
+.project-card.featured .project-links a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    padding: 8px 16px;
+    border-radius: 8px;
+    background: rgba(234, 88, 12, 0.05);
+}
+
+.project-card.featured .project-links a:hover {
+    color: var(--coral);
+    background: rgba(234, 88, 12, 0.1);
+    transform: translateY(-2px);
+}
+
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -920,6 +1177,69 @@ body {
     
     .projects-grid {
         grid-template-columns: 1fr;
+    }
+    
+    /* Portfolio responsive adjustments */
+    .portfolio-tabs {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 30px;
+    }
+    
+    .tab-btn {
+        padding: 10px 20px;
+        font-size: 0.85rem;
+        width: 100%;
+        max-width: 200px;
+    }
+    
+    .category-title {
+        font-size: 1.5rem;
+    }
+    
+    .category-description {
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+    }
+    
+    .featured-projects {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .project-card.featured .project-image {
+        height: 200px;
+    }
+    
+    .project-card.featured .project-info {
+        padding: 20px;
+    }
+    
+    .project-card.featured h3 {
+        font-size: 1.2rem;
+    }
+    
+    .project-meta {
+        gap: 6px;
+    }
+    
+    .project-meta .role,
+    .project-meta .type,
+    .project-meta .output {
+        height: 24px;
+        padding: 0 10px;
+        font-size: 0.75rem;
+    }
+    
+    .project-card.featured .tech-tags span {
+        padding: 4px 10px;
+        font-size: 0.75rem;
+    }
+    
+    .project-card.featured .project-links a {
+        padding: 6px 12px;
+        font-size: 0.85rem;
     }
     
     /* Identity responsive adjustments */
