@@ -133,12 +133,12 @@ document.addEventListener('DOMContentLoaded', () => {
     skillItems.forEach(item => {
         item.addEventListener('mouseenter', function() {
             const skillProgress = this.querySelector('.skill-progress');
-            skillProgress.style.background = 'linear-gradient(90deg, #2a5298 0%, #1e3c72 100%)';
+            skillProgress.style.background = 'linear-gradient(90deg, #FB923C 0%, #EA580C 100%)';
         });
         
         item.addEventListener('mouseleave', function() {
             const skillProgress = this.querySelector('.skill-progress');
-            skillProgress.style.background = 'linear-gradient(90deg, #1e3c72 0%, #2a5298 100%)';
+            skillProgress.style.background = 'linear-gradient(90deg, #EA580C 0%, #FB923C 100%)';
         });
     });
 });
